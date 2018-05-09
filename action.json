@@ -4,17 +4,16 @@
       "description": "Default Welcome Intent",
       "name": "MAIN",
       "fulfillment": {
-        "conversationName": "do-i-have-to-rush"
+        "conversationName": "assistant-personnel"
       },
       "intent": {
         "name": "actions.intent.MAIN",
         "trigger": {
           "queryPatterns": [
-            "talk to let's rush",
-            "let's rush",
-            "do i have to rush",
-            "do i have to hurry",
-            "start let's rush"
+            "parler à assistant personnel",
+            "assistant personnel",
+            "je veux mon assistant personnel",
+            "esclave"
           ]
         }
       }
@@ -23,7 +22,7 @@
       "description": "Everything Else Intent",
       "name": "allElse",
       "fulfillment": {
-        "conversationName": "do-i-have-to-rush"
+        "conversationName": "assistant-personnel"
       },
       "intent": {
         "name": "actions.intent.TEXT"
@@ -31,8 +30,8 @@
     }
   ],
   "conversations": {
-    "do-i-have-to-rush": {
-      "name": "do-i-have-to-rush",
+    "assistant-personnel": {
+      "name": "assistant-personnel",
       "url": "https://us-central1-gcloudProjectId.cloudfunctions.net/nameOfFunction"
     }
   }
