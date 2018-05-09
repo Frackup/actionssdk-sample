@@ -20,7 +20,7 @@ var ActionsSdk = require('actions-on-google').ActionsSdkApp;
  * For details see the blue box at the top of this page:
  * https://developers.google.com/actions/apiai/deploy-fulfillment
  */
-exports.shouldIRush = functions.https.onRequest((request, response) => {
+exports.personalAssistant = functions.https.onRequest((request, response) => {
 
     // create an ActionsSdkApp object;
     // indirection is used instead of constructor to
@@ -76,7 +76,7 @@ exports.shouldIRush = functions.https.onRequest((request, response) => {
             // If nothing matches, you might consider providing some help
             // to the user; I omit this for this simple usecase.
             console.log(`reactToUnknownPhrase triggered - ${getDebugInfo()} - at ${new Date()}`);
-            app.ask('I\'m sorry, but I\'m not able to help you with this.');
+            app.ask('Je suis désolé mais je ne suis malheureusement pas en mesure de vous aider avec votre demande.');
         }
     }
 
